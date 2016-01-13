@@ -1,1 +1,13 @@
-<h1>index</h1>
+<h1>Catalog</h1>
+
+<form action="/add_artist" method="post">
+  <label> Add an artist: </label>
+  <input type="text" name="artist" id="artist" value="">
+  <button type="submit" name="button">Add</button>
+</form>
+
+<ul>
+  <% @cd_list.each do |cd| %>
+    <li><%= cd.artist %></li>
+  <% end %>
+</ul>
