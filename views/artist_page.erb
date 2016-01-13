@@ -1,0 +1,11 @@
+<h1><%= @artist %></h1>
+
+<h3>
+  <ul>
+      <% @artist_cds.each do |cd| %>
+      <li><%= cd.title %></li>
+      <% end %>
+  </ul>
+</h3>
+
+<a href="/">Home</a>

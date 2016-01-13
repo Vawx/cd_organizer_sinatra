@@ -18,4 +18,8 @@ class Catalog
     end
     return found
   end
+
+  define_singleton_method(:clear) do
+    @@cd_list = []
+  end
 end

@@ -1,13 +1,19 @@
 <h1>Catalog</h1>
 
 <form action="/add_artist" method="post">
-  <label> Add an artist: </label>
-  <input type="text" name="artist" id="artist" value="">
-  <button type="submit" name="button">Add</button>
+  <div class="">
+      <label> Add an cd: </label>
+      <input type="text" name="cd" id="cd" value="">
+  </div>
+  <div class="">
+      <label> Artist name: </label>
+      <input type="text" name="artist" id="artist" value="">
+  </div>
+  <button type="submit" name="button" id="button">Add</button>
 </form>
 
 <ul>
   <% @cd_list.each do |cd| %>
-    <li><%= cd.artist %></li>
+    <li><%= cd.title %> by <a href="/artist_page/<%= cd.artist %>"> <%= cd.artist %></li></a>
   <% end %>
 </ul>
